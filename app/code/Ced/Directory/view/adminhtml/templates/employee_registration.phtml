@@ -1,0 +1,14 @@
+<?php
+/** @var Magento\Backend\Block\Template $block */
+?>
+<div>
+    <form id = "ced_directory" method="post"
+          action="<?php echo $block->getUrl('directory/employee/save');?>">
+        <fieldset class="employee-name">
+            <label for="name"><b>Employee Name</b></label><br><br>
+            <input id="name" type="text" name="name" placeholder="Enter Name Here">
+            <input type="hidden" name="form_key" value="<?php echo $block->getFormKey() ?>" />
+            <input id="submit" type="submit" value="Submit">
+        </fieldset>
+    </form>
+</div>

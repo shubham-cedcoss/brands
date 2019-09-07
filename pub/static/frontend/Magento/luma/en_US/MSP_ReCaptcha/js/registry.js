@@ -1,0 +1,1 @@
+/opt/lampp/htdocs/magento/vendor/msp/recaptcha/view/frontend/web/js/registry.js

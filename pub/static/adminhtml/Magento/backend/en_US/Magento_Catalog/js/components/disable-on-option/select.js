@@ -1,0 +1,1 @@
+/opt/lampp/htdocs/magento/vendor/magento/module-catalog/view/adminhtml/web/js/components/disable-on-option/select.js

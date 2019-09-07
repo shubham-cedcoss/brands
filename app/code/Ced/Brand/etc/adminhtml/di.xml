@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="brand_listing_data_source" xsi:type="string">BrandListingDataProvider</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="BrandListingDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">brands</argument>
+            <argument name="resourceModel" xsi:type="string">Ced\Brand\Model\ResourceModel\Brand</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Ced\Brand\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">brand/tmp/images</argument>
+            <argument name="basePath" xsi:type="string">brand/images</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

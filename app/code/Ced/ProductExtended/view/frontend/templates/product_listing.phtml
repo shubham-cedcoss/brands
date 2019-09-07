@@ -1,0 +1,34 @@
+<?php
+$productCollection = $block->getProductCollection();
+$mediaUrl = $block->getMediaUrl();
+?>
+<style>
+    .product-image{
+        height: 40px;
+        width: 40px;
+    }
+</style>
+<table>
+    <tr>
+        <th>Thumbnail</th>
+        <th>SKU</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <?php
+    foreach ($productCollection as $product) {
+        /*echo "<pre>";
+        print_r($product->getData());die;*/
+        ?>
+        <tr>
+            <td><img class="product-image" src="<?php echo $mediaUrl . 'catalog/' . 'product' . $product->getData('image') ?>" alt="Image"></td>
+            <td><?php echo $product->getData('sku')?></td>
+            <td><?php echo $product->getData('name')?></td>
+            <td><?php echo $product->getData('price')?></td>
+            <td><a data-product_id="<?php echo $product->getId()?>" href="http://192.168.1.114/magento/productextended/productextended/edit?id=<?php echo $product->getId()?>" target="_blank">Edit</a></td>
+        </tr>
+        <?php
+    }
+    ?>
+</table>

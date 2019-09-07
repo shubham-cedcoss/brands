@@ -1,0 +1,37 @@
+<?php
+$collection = $block->getImageCollection()->getData();
+$url = $block->getMediaUrl();
+/*echo $url;
+echo "<pre>";
+print_r($collection->getData());die;*/
+?>
+<body>
+<div id="owlslider" class="owl-carousel owl-theme">
+    <?php
+    foreach ($collection as $values) {
+        ?>
+        <img id="img" src="<?php echo $url . 'directory/' . 'tmp/' . 'images/' . $values['image']?>">
+        <?php
+    }
+    ?>
+</div>
+<script>
+    require([
+        'jquery',
+        'ced_owlcarousel'
+    ], function ($) {
+        'use strict';
+        $.noConflict();
+        $("#owlslider").owlCarousel({
+            nav: true, // Show next and prev buttons
+            navText:["<",">"], //show prev next
+            loop: true,
+            autoplay: true, //Set AutoPlay
+            autoplayHoverPause: true, //stop when mouse on carousel
+            items : 1,
+            autoWidth : false,
+        });
+    });
+</script>
+</body>
+

@@ -1,0 +1,94 @@
+<?php
+/** @var \Ced\ProductExtended\Block\Edit $block */
+$id = $block->getIdValue();
+$mediaUrl = $block->getMediaUrl();
+$product = $block->getProductById($id);
+$ip = $block->getIp();
+
+?>
+<style>
+    .product-info{
+        width: 150px;
+        height: 250px;
+    }
+    .image-info{
+        width: 150px;
+        height: 150px;
+    }
+    #unlike{
+        display: none;
+    }
+    #like{
+        display: none;
+    }
+</style>
+<body>
+<div class="product-info">
+    <div>
+        <img class="image-info" src="<?php echo $mediaUrl . 'catalog/' . 'product' . $product->getData('image')?>" alt="">
+    </div>
+    <div>
+        <p><?php echo "Name : " . $product->getData('name')?></p>
+    </div>
+    <div>
+        <p><?php echo "SKU : " . $product->getData('sku')?></p>
+    </div>
+    <div>
+        <button id="like">Like</button>
+    </div>
+    <div>
+        <button id="unlike">Unlike</button>
+    </div>
+</div>
+<script>
+    require(['jquery', 'jquery/ui'], function($){
+        $(document).ready( function() {
+            let id = <?php echo $id?>;
+            let ip = '<?php echo $ip?>';
+            let action = 'validate';
+            ajaxCall();
+
+            $(document).on('click', '#like', function () {
+                action = 'like';
+                ajaxCall();
+            });
+            $(document).on('click', '#unlike', function () {
+                action = 'unlike';
+                ajaxCall();
+            });
+
+            function ajaxCall(){
+                $.ajax(
+                    'savelikedproduct',
+                    {
+                        type : 'POST',
+                        data : {
+                            action : action,
+                            product_id : id,
+                            remote_ip : ip
+                        },
+                        success : function (data) {
+                            data = $.parseJSON(data);
+                            //console.log(data);
+                            if (data === 'validated'){
+                                $("#unlike").show();
+                            }else {
+                                $("#like").show()
+                            }
+                            if (data === 'unliked') {
+                                $("#unlike").hide();
+                                $("#like").show()
+                            }else if (data === 'liked') {
+                                $("#like").hide();
+                                $("#unlike").show()
+                            }
+                        }
+                    }
+                );
+
+            }
+
+        });
+    });
+</script>
+</body>

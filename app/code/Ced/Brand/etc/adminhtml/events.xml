@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="custom_brand_delete_after">
+        <observer name="branddeleteobserver" instance="Ced\Brand\Observer\BrandDeleteObserver"/>
+    </event>
+</config>

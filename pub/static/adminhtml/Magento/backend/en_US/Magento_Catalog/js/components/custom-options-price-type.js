@@ -1,1 +1,0 @@
-/opt/lampp/htdocs/magento/vendor/magento/module-catalog/view/adminhtml/web/js/components/custom-options-price-type.js

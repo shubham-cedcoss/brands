@@ -1,1 +1,0 @@
-/opt/lampp/htdocs/magento/vendor/magento/module-eav/view/adminhtml/web/js/input-types.js

@@ -1,1 +1,0 @@
-/opt/lampp/htdocs/magento/vendor/magento/module-swatches/view/adminhtml/web/js/text.js

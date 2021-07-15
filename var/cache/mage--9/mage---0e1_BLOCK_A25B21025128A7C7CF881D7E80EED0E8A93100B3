@@ -1,6 +1,0 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1567846885;s:6:"expire";i:1567850485;s:4:"tags";s:57:"0e1_BLOCK_HTML,0e1_CAT_C,0e1_CAT_C_5,0e1_CAT_C_6,0e1_MAGE";}
-
-<nav class="navigation" data-action="navigation">
-    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
-        <li  class="level0 nav-1 category-item first active level-top"><a href="http://192.168.1.114/magento/electronics.html"  class="level-top" ><span>Electronics</span></a></li><li  class="level0 nav-2 category-item last level-top"><a href="http://192.168.1.114/magento/men.html"  class="level-top" ><span>Men</span></a></li>            </ul>
-</nav>

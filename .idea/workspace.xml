@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf377d46-2772-4153-9602-29a56684f08d" name="Default Changelist" comment="" />
+    <list default="true" id="bf377d46-2772-4153-9602-29a56684f08d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/view/adminhtml/templates/test.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/adminhtml/layout/brand_brand_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/view/adminhtml/layout/brand_brand_form.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/templates/test.phtml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -234,6 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1626358836200</updated>
       <workItem from="1626358841943" duration="1116000" />
+      <workItem from="1626441808611" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="update brands">
       <created>1626359701475</created>
@@ -242,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626359701475</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1626441892266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626441892266</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +262,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update brands" />
-    <option name="LAST_COMMIT_MESSAGE" value="update brands" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

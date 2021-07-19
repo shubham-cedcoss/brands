@@ -1,0 +1,10 @@
+name: M2 Copy Paste Detector
+on: [push, pull_request]
+
+jobs:
+  phpcpd:
+    name: M2 Copy Paste Detector
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: shikhamis11/m2-cpd-action@master
